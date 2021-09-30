@@ -1,0 +1,49 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table.important {
+    border: 2px solid deeppink;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: "Comic Sans MS", serif;
+}
+
+p {
+    font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: larger;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    text-align: start;
+}
+
+img.floaty {
+    float: left;
+}
+
+div.multicolumn:after {
+    content: "";
+    display: table;
+    clear: both;
+}
