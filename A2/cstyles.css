@@ -1,0 +1,50 @@
+body {
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: midnightblue;
+    color: #fff
+}
+
+.mainrectangle {
+    background-color: darkblue;
+}
+
+html *
+{
+    font-family: Arial, monospace !important; /*can get rid of these*/
+}
+
+div.banner {
+    padding: 60px;
+    text-align: center;
+    vertical-align: center;
+    background: #19679a;
+    color: white;
+    font-size: 30px;
+    border: 5px solid blueviolet;
+    margin: 30px 2%;
+}
+
+div.article {
+    margin-left: 60px;
+    margin-right: 120px;
+}
+div.articlebox
+{
+    border: 3px dotted #dedded;
+    background-color: #1f1f81;
+}
+
+p.article {
+    margin: 1% 1%;
+
+}
+
+h2.article {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+a:hover {
+    color: red; !important;
+}

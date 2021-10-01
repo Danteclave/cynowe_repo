@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="text-align: center">
+    <a href="subtaskc.html">inconspicuous link to subtask C</a>
+</div>
+<div class="multicolumn">
+    <div class="column">
+        <form name="texty text" method="get" style="text-align: center">
+            <p>Input some text here:</p>
+            <label for="txt1"></label><input type="text" name="firstpieceoftext" id="txt1"><br/>
+            <label for="txt2"></label><input type="text" name="secondpieceoftext" id="txt2"><br/>
+        <p>Input a secret password to unlock a hidden functionality (could be missing)</p>
+            <label for="psswrd"></label><input type="password" name="password" id="psswrd"><br/>
+            <label>
+                <input type="checkbox" value="agreement" name="agree" />
+            </label>I agree to have my kneecaps switch which leg they are attached to
+            <p>Select your favourite food:</p>
+            <label for="foodwater" class="opt">
+                <input type="radio" name="food" value="water sandwich" id="foodwater">Water sandwich
+            </label>
+            <label for="foodbread" class="opt">
+                <input type="radio" name="food" value="bread sandwich" id="foodbread">Bread sandwich
+            </label>
+            <br/>
+            <input type="submit" name="submitLeft" value="submit">
+            <input type="reset" name="resetLeft" value="reset">
+        </form>
+    </div>
+    <div class="column">
+        <form name="right side" method="post" style="text-align: center">
+            <p>Select your phone number:</p>
+            <label class="mandatory">
+                <select name="phone number" id="pog">
+                    <option value="1" selected="selected">1</option>
+                    <script>
+                        for (let i=0; i<2000; i++)
+                        {
+                            let h = Math.floor(100000000 + Math.random() * 900000000);
+                            document.getElementById("pog").insertAdjacentHTML("beforeend",
+                                `<option value=\"${h}\">${h}</option>`);
+                        }
+                    </script>
+                </select><br/>
+                If your phone number is not here, refresh the page and try again.
+            </label>
+            <p>Input your credit card details</p>
+            <label>
+                <textarea rows="3" cols="40">three digits at the back</textarea>
+            </label><br/>
+            <input type="submit" name="submitRight" value="submit">
+            <input type="reset" name="resetRight" value="reset">
+        </form>
+    </div>
+</div>
+</body>
+</html>
