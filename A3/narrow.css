@@ -1,0 +1,43 @@
+.container {
+    display: grid;
+    grid-gap: 0;
+    margin: 0 0;
+}
+
+
+.panel {
+    margin-left: 5px;
+    margin-right: 5px;
+    grid-row-start: 2;
+    grid-column-end: span 1;
+
+}
+
+.header, .footer {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+}
+
+.header {
+    grid-row-start: 1;
+}
+
+.footer {
+    grid-row-start: 4;
+    padding: 5px;
+    text-align: center;
+    vertical-align: center;
+    background: #19679a;
+    color: white;
+    border: 1px solid blueviolet;
+    margin: 30px 2%;
+}
+
+.gallery {
+    grid-column-end: span 1;
+    grid-row-start: 3;
+}
+
+.multicolumnwrap {
+
+}

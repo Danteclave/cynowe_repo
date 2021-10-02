@@ -1,0 +1,45 @@
+body {
+    background-color: #dddddd;
+}
+
+img.banner {
+    filter: drop-shadow(5px 10px #222244);
+    transform: rotate(10deg);
+    border-radius: 25px;
+}
+
+div.banner {
+    padding: 30px;
+    text-align: center;
+    vertical-align: center;
+    background: #19679a;
+    color: white;
+    font-size: 30px;
+    border: 5px solid blueviolet;
+    margin: 30px 2%;
+}
+
+.column {
+    float: left;
+}
+
+img.floaty {
+    float: left;
+    width: 250px;
+}
+
+div.column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pulledquote {
+    float: right;
+    color: #227722;
+    font-family: "Century Gothic", fantasy;
+}
+
+html > * {
+    font-family: "Comic Sans MS", sans-serif;
+}
