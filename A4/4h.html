@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<button onclick="console.log(get2ndMinMax(prompt()))">get2ndMinMax</button>
+</body>
+</html>
+<script>
+  let get2ndMinMax = x => {
+    x = x.split(" ").map(e => Number(e)).sort();
+    return [x[1], x.slice(-2, -1)].join();
+  }
+</script>

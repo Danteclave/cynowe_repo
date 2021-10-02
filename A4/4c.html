@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="console.log(checkPalindrome(prompt()))">checkPalindrome</button>
+</body>
+</html>
+<script>
+    let checkPalindrome = x => {
+        return x === x.split("").reverse().join("")
+    }
+</script>

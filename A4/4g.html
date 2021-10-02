@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="console.log(getType(prompt()))">getType</button>
+<button onclick="console.log(getType(Number(prompt())))">getType but with number</button>
+</body>
+</html>
+<script>
+    let getType = x => {
+        return typeof(x);
+    }
+</script>
