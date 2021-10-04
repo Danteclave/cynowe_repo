@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="console.log(a.fullName)">print</button>
+<button onclick="console.log(a.average)">print</button>
+</body>
+</html>
+<script>
+
+    class Person
+    {
+
+        constructor(fname, lname)
+        {
+            this.fname = fname ?? "";
+            this.lname = lname ?? "";
+        }
+
+        set fullName(x)
+        {
+           this.fname = x.split(" ")[0];
+           this.lname = x.split(" ")[1];
+        }
+
+        get fullName()
+        {
+            return this.fname + " " + this.lname;
+        }
+
+    }
+
+    class Student extends Person
+    {
+        constructor(fname, lname, id, grades) {
+            super(fname, lname);
+            this.id = id;
+            this.grades = grades;
+        }
+
+        get average()
+        {
+            return this.grades.reduce((a,b) => a+b)/this.grades.length;
+        };
+    }
+
+    let a = new Student('sus', 'amogus', 1, [2,2,3,3]);
+    a.fullName = "sussus amogussus";
+</script>

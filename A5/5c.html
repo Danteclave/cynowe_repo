@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+
+  const student = {
+    requiredCourses: ["NIE", "PAIN", "SUS"]
+  }
+
+
+  let Student = function(fname, lname, id)
+  {
+    let obj =  Object.create(student, Object.getOwnPropertyDescriptors(student));
+    obj.fname = fname;
+    obj.lname = lname;
+    obj.id = id;
+    return obj;
+  }
+
+
+  let sus = new Student("amogus", "sus", 9)
+  console.log(sus);
+</script>

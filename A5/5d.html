@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Student(fname, lname, id, grades)
+    {
+        this.fname = fname;
+        this.lname = lname;
+        this.id = id;
+        this.grades = grades;
+
+        this.getFullName = () => {
+            return this.fname + " " + this.lname;
+        };
+
+        this.getAverage = () => {
+            return this.grades.reduce((a,b) => a+b)/this.grades.length;
+        }
+    }
+
+
+    let a = new Student('sus', 'amogus', 1, [2,2,3,3]);
+    Object.defineProperties(a, {
+        'fullName': { set: (x) => { a.fname = x.split(" ")[0]; a.lname = x.split(" ")[1]} },
+        'averageGrade': { get: () => a.getAverage() }
+    });
+
+    a.fullName = "amogus sussus";
+    console.log(a.getFullName());
+    console.log(a.averageGrade);
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="let a = new Student('sus', 'amogus', 1, [2,2,3,3]); console.log(a.getFullName())">print</button>
+<button onclick="let a = new Student('sus', 'amogus', 1, [2,2,3,3]); console.log(a.getAverage())">print</button>
+</body>
+</html>
+<script>
+    function Student(fname, lname, id, grades)
+    {
+        this.fname = fname;
+        this.lname = lname;
+        this.id = id;
+        this.grades = grades;
+
+        this.getFullName = () => {
+            return this.fname + " " + this.lname;
+        }
+
+        this.getAverage = () => {
+            return this.grades.reduce((a,b) => a+b)/this.grades.length;
+        }
+    }
+</script>
