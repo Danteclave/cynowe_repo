@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: #ddffdd;
+        }
+
+        tr,th,td, table
+        {
+            border: 1px solid green;
+            border-collapse: collapse;
+        }
+        div.griddiv
+        {
+            display:grid;
+            grid-template-columns: repeat(4, 1fr) 5fr;
+            grid-template-rows: 3fr 1fr;
+        }
+    </style>
+</head>
+<body>
+<form onsubmit="return addRow()" id="mainform">
+    <div class="griddiv">
+        <div><label for="row1">First row</label><br/><textarea id="row1"></textarea></div>
+        <div><label for="row2">Second row</label><br/><textarea id="row2"></textarea></div>
+        <div><label for="row3">Third row</label><br/><textarea id="row3"></textarea></div>
+        <div><label for="row4">Fourth row</label><br/><textarea id="row4"></textarea></div>
+        <div style="text-align: center; grid-row-start: 2;grid-column: 2 / span 2"><input type="submit"></div>
+    </div>
+</form>
+<br/>
+<table id="mainTable">
+    <tr>
+        <th>this</th>
+        <th>isn't</th>
+        <th>a</th>
+        <th>bug</th>
+    </tr>
+    <tr>
+        <td>it's</td>
+        <td>a</td>
+        <td>feature</td>
+        <td>>:(</td>
+    </tr>
+    <tr>
+        <td>000</td>
+        <td>001</td>
+        <td>010</td>
+        <td>011</td>
+    </tr>
+    <tr>
+        <td>100</td>
+        <td>101</td>
+        <td>110</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td>111+1</td>
+        <td>111+10</td>
+        <td>111+11</td>
+        <td>111+100</td>
+    </tr>
+</table>
+</body>
+</html>
+<script>
+    let addRow = () =>
+    {
+        let form = document.forms["mainform"];
+        let ary = ["row1", "row2", "row3", "row4"]
+        ary = ary.map(e=>form[e].value);
+        let row = document.getElementById("mainTable").insertRow(-1);
+        for(let i=0;i<4;i++)
+        {
+            row.insertCell(i).innerHTML = ary[i];
+        }
+        return false;
+    }
+</script>
