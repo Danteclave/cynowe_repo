@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>This is the first paragraph, and if everything goes well a second paragraph will appear beneath it.</p>
+</body>
+</html>
+<script>
+    setTimeout("switcheroo()", 5000);
+
+    let switcheroo = () => {
+        let parag = document.createElement("p");
+        parag.appendChild(document.createTextNode("SECOND PARAGRAPH POG"));
+        document.querySelector("body").appendChild(parag);
+    }
+
+</script>

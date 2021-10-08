@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <label for="toConvert">Number to convert from</label><input type="number" id="toConvert"><br/>
+    </form>
+    <button onclick="updateResult(document.querySelector('#toConvert').value, 'F')">convert to fahrenheit</button>
+    <button onclick="updateResult(document.querySelector('#toConvert').value, 'C')">convert to celsius</button>
+    <br/>
+    <input type="text" disabled id="result">
+</body>
+</html>
+<script>
+
+    let updateResult = (x, y) => {
+        let resString = "";
+        if(y === "C")
+        {
+            resString += toCelsius(x);
+        }
+        else
+        {
+            resString += toFahrenheit(x);
+        }
+        resString += " " + y
+        document.getElementById("result").value = resString;
+
+    }
+
+    let toFahrenheit = (x) => {
+        return 32 + 1.8 * x;
+    }
+
+    let toCelsius = (x) => {
+        return (5/9)*(x-32);
+    }
+</script>
