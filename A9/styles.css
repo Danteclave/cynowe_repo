@@ -1,0 +1,16 @@
+body
+{
+    background-color: black;
+    color: white;
+}
+
+.gridcontainer
+{
+    margin-left: 25%;
+    margin-right: 25%;
+    display: grid;
+    grid-template-areas:
+    "t1 bt"
+    "t2 rs"
+    "t3 rs";
+}

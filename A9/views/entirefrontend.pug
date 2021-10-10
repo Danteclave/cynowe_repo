@@ -1,0 +1,28 @@
+html
+    head
+        title Math express app
+        style
+            include ../styles.css
+    body
+        form.gridcontainer
+            div(style='grid-area: t1')
+                label(for='operand1') Operand 1
+                input#operand1(name='operand1' type='number' required='')
+            div(style='grid-area: t2')
+                label(for='operand2') Operand 2
+                input#operand2(name='operand2' type='number' required='')
+            div(style='grid-area: t3; text-align: center')
+                select#opcode(name='opcode' required='')
+                    option(value='plus' selected='selected') +
+                    option(value='minus') -
+                    option(value='asterisk') *
+                    option(value='slash') /
+                br
+            div(style='grid-area: bt; text-align: center')
+                button#resultbutton(type='button' name='resultbutton' onclick="clickEventHandler()") Calculate
+            div(style='grid-area: rs; text-align: center')
+                h3 Result of operation:
+                div#result
+            br
+    script
+        include ../frontendscript.js
