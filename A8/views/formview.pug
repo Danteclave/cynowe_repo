@@ -1,0 +1,20 @@
+html
+    head
+        title "Form"
+    body
+        form(action="/formdata" method="post")
+            label(for="text1")
+                | Text1
+                input(type="text" id="text1" name="text1" required)
+                br
+            label(for="text2")
+                | Text2
+                input(type="text" id="text2" name="text2" required)
+                br
+            label(for="text3")
+                | Text3
+                input(type="text" id="text3" name="text3" required)
+            br
+            br
+            label(for="submittybutton")
+                input(type="submit" id="submittybutton")
